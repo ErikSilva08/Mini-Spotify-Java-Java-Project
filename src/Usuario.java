@@ -3,15 +3,18 @@ import java.util.ArrayList;
 public class Usuario {
     private String name;
     private String email;
-    private ArrayList playlist;
+    private ArrayList<Playlist> playlist;
 
     public Usuario(String name, String email) {
-    }
-
-    public Usuario(String name, String email, ArrayList playlist) {
         this.name = name;
         this.email = email;
-        this.playlist = playlist;
+        this.playlist = new ArrayList<Playlist>();
+    }
+
+    public Usuario(String name, String email, ArrayList<Playlist> playlist) {
+        this.name = name;
+        this.email = email;
+        this.playlist = playlist != null ? playlist : new ArrayList<>();
     }
 
 
@@ -31,12 +34,12 @@ public class Usuario {
         this.email = email;
     }
 
-    public ArrayList getPlaylist() {
+    public ArrayList<Playlist> getPlaylist() {
         return playlist;
     }
 
-    public void setPlaylist(ArrayList playlist) {
-        this.playlist = playlist;
+    public void adicionarPlaylist(Playlist p) {
+        playlist.add(p);
     }
 
 

@@ -1,7 +1,7 @@
 enum Genero {
     ROCK("Rock"),
     FUNK("Funk"),
-    ELETRONICA("Eletrônica");
+    ELETRONICA("Eletrônica"),
     POP("Pop"),
     MPB("Música Popular Brasileira"),
     JAZZ("Jazz"),
